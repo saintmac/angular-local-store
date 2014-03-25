@@ -1,0 +1,24 @@
+{
+  "name": "angular-local-store",
+  "version": "0.1.0",
+  "description": "Angular $cookieStore like API for localStorage",
+  "main": "angular-local-store.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:saintmac/angular-local-store.git"
+  },
+  "keywords": [
+    "angular",
+    "localStorage",
+    "$cookieStore"
+  ],
+  "author": "saintmac <martin.saintmac@gmail.com> (Martin Saint-Macary)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saintmac/angular-local-store/issues"
+  },
+  "homepage": "https://github.com/saintmac/angular-local-store"
+}

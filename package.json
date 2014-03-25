@@ -20,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/saintmac/angular-local-store/issues"
   },
-  "homepage": "https://github.com/saintmac/angular-local-store"
+  "homepage": "https://github.com/saintmac/angular-local-store",
+  "devDependencies": {
+    "karma": "~0.12.1",
+    "karma-chrome-launcher": "~0.1.2",
+    "karma-jasmine": "~0.1.5",
+    "mocha": "~1.18.2",
+    "karma-mocha": "~0.1.3",
+    "chai": "~1.9.1",
+    "karma-chai": "~0.1.0"
+  }
 }

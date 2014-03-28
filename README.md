@@ -22,3 +22,10 @@ $localStore.remove('car');
 
 ```
 
+## clear
+$localStore adds an extra `#clear` method to remove every key from localStorage (similar to `localStorage.clear()`)
+
+```javascript
+$localStore.clear();
+```
+

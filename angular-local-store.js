@@ -1,23 +1,27 @@
 angular.module('ngLocalStore', []).service('$localStore', function() {
-  var LocalStorage;
-  LocalStorage = (function() {
-    function LocalStorage() {}
+  var LocalStore;
+  LocalStore = (function() {
+    function LocalStore() {}
 
-    LocalStorage.prototype.get = function(key) {
+    LocalStore.prototype.get = function(key) {
       return JSON.parse(localStorage.getItem(key));
     };
 
-    LocalStorage.prototype.put = function(key, value) {
+    LocalStore.prototype.put = function(key, value) {
       return localStorage.setItem(key, JSON.stringify(value));
     };
 
-    LocalStorage.prototype.remove = function(key) {
+    LocalStore.prototype.remove = function(key) {
       return localStorage.removeItem(key);
     };
 
-    return LocalStorage;
+    LocalStore.prototype.clear = function(key) {
+      return localStorage.clear();
+    };
+
+    return LocalStore;
 
   })();
-  return new LocalStorage();
+  return new LocalStore();
 });
 

@@ -1,6 +1,6 @@
 {
   "name": "angular-local-store",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Angular $cookieStore like API for localStorage",
   "main": "angular-local-store.js",
   "scripts": {

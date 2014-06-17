@@ -112,6 +112,26 @@ describe('ngLocalStore', function() {
           });
         });
       });
+
+      describe('with an undefined value', function() {
+        beforeEach(function() {
+          $localStore.put('und', undefined);
+        });
+
+        describe('#put', function() {
+          it("should not have set the var und", function() {
+            var und = localStorage.getItem('und');
+            should.not.exist(und);
+          });
+        });
+
+        describe('#get', function() {
+          it("should return undefined", function() {
+            var und = $localStore.get('und');
+            should.not.exist(und);
+          });
+        });
+      });
     });
 
     describe('#clear', function() {

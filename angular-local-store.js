@@ -4,7 +4,15 @@ angular.module('ngLocalStore', []).service('$localStore', function() {
     function LocalStore() {}
 
     LocalStore.prototype.get = function(key) {
-      return JSON.parse(localStorage.getItem(key));
+      var result;
+      try {
+        result = JSON.parse(localStorage.getItem(key));
+      }
+      catch (err) {
+        result = null;
+      }
+
+      return result;
     };
 
     LocalStore.prototype.put = function(key, value) {

@@ -14,6 +14,17 @@ describe('ngLocalStore', function() {
     }));
 
     describe('#put, #get, #remove', function() {
+      describe('with invalid characters', function() {
+        beforeEach(function() {
+          localStorage.inval = "jklm";
+        });
+
+        describe('#get', function() {
+          it("should not crash", function() {
+            var invalid = $localStore.get('inval');
+          });
+        });
+      });
       describe('with a string', function() {
         beforeEach(function() {
           $localStore.put('name', 'martin');

@@ -17,7 +17,12 @@ angular.module('ngLocalStore', []).service('$localStore', function() {
 
     LocalStore.prototype.put = function(key, value) {
       if (value)
-        return localStorage.setItem(key, JSON.stringify(value));
+        try {
+          return localStorage.setItem(key, JSON.stringify(value));
+        }
+        catch (error) {
+          return false;
+        }
       else
         return false;
     };
